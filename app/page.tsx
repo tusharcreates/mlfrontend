@@ -53,8 +53,8 @@ export default function Home() {
     const res = await axios.post(
       `http://localhost:3000/`,
       {
-        latitude: data.latitude,
-        longitude: data.longitude,
+        latitude: lat,
+        longitude: lng,
       },
       axiosConfig
     );
