@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html,
+#__next {
+  @apply h-full;
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+  // hide overscroll
+  overscroll-behavior: none;
+  input{
+    @apply block;
+    @apply w-full;
+    @apply px-3;
+    @apply py-1 rounded-lg;
+    @apply text-base;
+    @apply outline-none;
+    @apply placeholder-slate-500;
+
+    border-width:2px;
+
+    &:focus {
+      @apply border-blue-600;
+      @apply ring-2 ring-slate-200;
+    }
+
+    &.input-sm {
+      @apply px-2.5;
+      @apply py-1.5;
+      @apply text-sm;
+    }
+
+    &.input-invalid {
+      @apply border-red-500;
+    }
+
+    &.zoom {
+      @apply border border-blue-600 py-2.5 px-4;
+      @apply rounded-3xl;
+    }
+  }
+
+  input[disabled] {
+    @apply bg-slate-100;
+  }
+
+  .input-group {
+    input:nth-child(1) {
+      @apply rounded-tr-none;
+      @apply rounded-br-none;
+    }
+
+    input:nth-child(2) {
+      @apply -ml-0;
+      @apply rounded-tl-none;
+      @apply rounded-bl-none;
+    }
+  }
+}
